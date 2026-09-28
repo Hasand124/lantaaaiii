@@ -34,23 +34,13 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-   	export TW_DEFAULT_LANGUAGE="en"
+	export OF_MAINTAINER="Tapin Recovery Instraller"
+	export FOX_VERSION="R11.1_0"
+	export FOX_VARIANT="Stable"
+	export FOX_BUILD_TYPE="Unofficial"
+	export TARGET_DEVICE_ALT="lancelot,shiva,galahat"
+	export OF_TARGET_DEVICES="lancelot,shiva,galahat"
 	export LC_ALL="C"
- 	export ALLOW_MISSING_DEPENDENCIES=true
-	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-	export TARGET_DEVICE_ALT="lancelot,shiva"
-	export OF_TARGET_DEVICES="lancelot,shiva"
-	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-	export OF_QUICK_BACKUP_LIST="/boot;/data;"
-	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1588606644"
-        export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
-
-	# Screen Settings
-	export OF_SCREEN_H=2340
-	export OF_STATUS_INDENT_LEFT="48"
-	export OF_STATUS_INDENT_RIGHT="48"
-	export OF_ALLOW_DISABLE_NAVBAR="0"
 
 	export OF_USE_MAGISKBOOT=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
@@ -64,11 +54,21 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 	export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
 
-	# R11.1 Setings
-	export FOX_BUILD_TYPE="Unofficial"
-	export OF_MAINTAINER="Norikhsan90"
-	export FOX_VERSION="R11.1_0"
+    # Display / Leds
+	export OF_SCREEN_H="2400"
+	export OF_STATUS_H="99"
+	export OF_STATUS_INDENT_LEFT=48
+	export OF_STATUS_INDENT_RIGHT=48
+	export OF_HIDE_NOTCH=1
+	export OF_CLOCK_POS=1 # left and right clock positions available
+	export OF_USE_GREEN_LED=0
+	export OF_FLASHLIGHT_ENABLE=1
 
+	# Removes the loop block errors after flashing ZIPs (Workaround) 
+	export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
+	export OF_LOOP_DEVICE_ERRORS_TO_LOG=1
+  
+	# R11.1 Setings
 	export FOX_ENABLE_APP_MANAGER=1
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
@@ -78,11 +78,20 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export FOX_R11=1
-	export OF_FLASHLIGHT_ENABLE=0
 	export FOX_DELETE_AROMAFM=1
 	export OF_PATCH_AVB20=1
 	export OF_FBE_METADATA_MOUNT_IGNORE="1"
 	export FOX_REPLACE_BUSYBOX_PS="0"
+
+	export TW_DEFAULT_LANGUAGE="en"
+ 	export ALLOW_MISSING_DEPENDENCIES=true
+	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+	export OF_QUICK_BACKUP_LIST="/boot;/data;"
+	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1588606644"
+
+	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
+	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+    export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
 
 	# Run a Process After Formatting Data to Work-Around MTP Issues
 	export OF_RUN_POST_FORMAT_PROCESS=1
