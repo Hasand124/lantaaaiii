@@ -40,5 +40,3 @@
 /usb_otg         auto     /dev/block/sda1  /dev/block/sda                       flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8";backup=0;
 #
 
-/sdcard1          auto    /dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="SD Card";storage;wipeingui;removable;fsflags="utf8"
-/usb_otg          auto     /dev/block/sda1  /dev/block/sda                    flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
