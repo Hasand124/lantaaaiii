@@ -11,11 +11,6 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 # <mount_point>  <fstype>  <device>        <device2>                  <flags>
-/system_root      ext4    /dev/block/mapper/system                              flags=backup=1;display="System Image";flashimg=1;logical;wipeingui
-/product          ext4    /dev/block/mapper/product                             flags=backup=1;display="Product";flashimg=1;logical;wipeingui
-/vendor           ext4    /dev/block/mapper/vendor                              flags=backup=1;display="Vendor";flashimg=1;logical;wipeingui
-
-# <mount_point>  <fstype>  <device>        <device2>                  <flags>
 /data             ext4    /dev/block/platform/bootdevice/by-name/userdata       flags=fileencryption=aes-256-xts
 /cache            ext4    /dev/block/platform/bootdevice/by-name/cache          flags=display="Caches";wipeduringfactoryreset
 
