@@ -188,3 +188,41 @@ TW_INCLUDE_FASTBOOTD := true
 # Log
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
+
+##############################################################################################
+# SHRP flags
+##############################################################################################
+
+# maintainer
+SHRP_MAINTAINER := "Tapin Recovery Instraller"
+
+# device
+SHRP_DEVICE_CODE := Lancelot
+SHRP_PATH := device/xiaomi/lancelot
+SHRP_REC_TYPE := Normal
+SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery 
+SHRP_DEVICE_TYPE := V-A
+SHRP_AB := false
+
+# mount points
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /sdcard1
+SHRP_OTG := /usb_otg
+
+# theming
+SHRP_DARK := true
+
+# "SHRP Express"
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
+
+# status bar padding
+SHRP_STATUSBAR_RIGHT_PADDING := 64
+SHRP_STATUSBAR_LEFT_PADDING := 64
+
+# skip all addons
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+SHRP_SKIP_DEFAULT_ADDON_4 := true
+SHRP_EXCLUDE_MAGISK_FLASH := true
