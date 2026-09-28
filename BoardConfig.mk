@@ -136,13 +136,14 @@ TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 ifneq ($(OF_HIDE_NOTCH),1)
- # Configure Status bar icons for regular TWRP builds only
- TW_DEVICE_VERSION := Tapin™
- TW_STATUS_ICONS_ALIGN := center
- TW_CUSTOM_CPU_POS := "300"
- TW_CUSTOM_CLOCK_POS := "70"
- TW_CUSTOM_BATTERY_POS := "790"
+  # Configure Status bar icons for regular TWRP builds only
+    TW_DEVICE_VERSION := Lancelot/Galahat Tapin™
+    TW_STATUS_ICONS_ALIGN := center
+    TW_CUSTOM_CPU_POS := 300
+    TW_CUSTOM_CLOCK_POS := 50
+    TW_CUSTOM_BATTERY_POS := 800
 endif
+
 
 # UEFI
 TARGET_USES_UEFI := true
