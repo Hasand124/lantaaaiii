@@ -28,14 +28,6 @@ service keymaster-4-0-beanpod /system/bin/android.hardware.keymaster@4.0-service
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-4-1-beanpod /system/bin/android.hardware.keymaster@4.1-service.beanpod
-    interface android.hardware.keymaster@4.0::IKeymasterDevice default
-    interface android.hardware.keymaster@4.1::IKeymasterDevice default
-    user root
-    group root drmrpc
-    disabled
-    seclabel u:r:recovery:s0
-
 service unified-script /system/bin/unified-script.sh
     user root
     group root
@@ -45,18 +37,15 @@ service unified-script /system/bin/unified-script.sh
 
 on property:crypto.ready=1
     start keymaster-4-0-beanpod
-    start keymaster-4-1-beanpod
 
 on property:hwservicemanager.ready=true
     start teei_daemon
     start keymaster-4-0-beanpod
-    start keymaster-4-1-beanpod
     start gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
     stop teei_daemon
     stop keymaster-4-0-beanpod
-    stop keymaster-4-1-beanpod
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
@@ -64,7 +53,6 @@ on property:ro.crypto.state=unsupported
 on property:ro.crypto.state=unencrypted
     stop teei_daemon
     stop keymaster-4-0-beanpod
-    stop keymaster-4-1-beanpod
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
@@ -72,7 +60,6 @@ on property:ro.crypto.state=unencrypted
 on property:twrp.decrypt.done=true
     stop teei_daemon
     stop keymaster-4-0-beanpod
-    stop keymaster-4-1-beanpod
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
