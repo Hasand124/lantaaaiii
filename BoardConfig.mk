@@ -226,3 +226,9 @@ SHRP_SKIP_DEFAULT_ADDON_2 := true
 SHRP_SKIP_DEFAULT_ADDON_3 := true
 SHRP_SKIP_DEFAULT_ADDON_4 := true
 SHRP_EXCLUDE_MAGISK_FLASH := true
+
+# flashlight
+SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/devices/platform/flashlights_led191/leds/torch-light0/brightness
+SHRP_FLASH_MAX_BRIGHTNESS := 1
