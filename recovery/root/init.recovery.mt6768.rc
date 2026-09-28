@@ -1,4 +1,4 @@
-import /init.microtrust.rc
+import /init.recovery.microtrust.rc
 
 on init
     setprop sys.usb.configfs 1
