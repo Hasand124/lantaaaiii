@@ -39,7 +39,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_VARIANT="Stable"
 	export FOX_BUILD_TYPE="Unofficial"
 	export TARGET_DEVICE_ALT="lancelot,shiva,galahat"
-	export OF_TARGET_DEVICES="lancelot,shiva,galahat"
 	export LC_ALL="C"
 
 	export OF_USE_MAGISKBOOT=1
