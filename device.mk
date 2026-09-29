@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Fastbootd
 PRODUCT_PACKAGES += \
