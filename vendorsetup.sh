@@ -35,7 +35,7 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_MAINTAINER="Tapin Recovery Instraller"
-	export FOX_VERSION="R11.1_0"
+	export FOX_VERSION="R11.1_2"
 	export FOX_VARIANT="Stable"
 	export FOX_BUILD_TYPE="Unofficial"
 	export TARGET_DEVICE_ALT="lancelot,shiva,galahat"
