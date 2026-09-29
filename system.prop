@@ -1,5 +1,4 @@
 # Dynamic Partitions
-ro.boot.dynamic_partitions=true
 ro.sys.usb.storage.type=mtp
 ro.mtk_tee_gp_support=1
 ro.mtk_microtrust_tee_support=1
