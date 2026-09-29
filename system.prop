@@ -1,9 +1,11 @@
 # Dynamic Partitions
+ro.boot.dynamic_partitions=true
 ro.sys.usb.storage.type=mtp
 ro.mtk_tee_gp_support=1
 ro.mtk_microtrust_tee_support=1
 ro.hardware.gatekeeper=beanpod
 ro.hardware.kmsetkey=beanpod
+fbe.metadata.wrappedkey=true
 ro.crypto.allow_encrypt_override=true
 ro.crypto.dm_default_key.options_format.version=1
 ro.crypto.volume.metadata.method=dm-default-key
