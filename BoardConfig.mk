@@ -110,9 +110,6 @@ BOARD_USES_MTK_HARDWARE := true
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
-# System as root
-BOARD_SUPPRESS_SECURE_ERASE := true
-
 # Device
 TARGET_SCREEN_DENSITY := 440
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness"
