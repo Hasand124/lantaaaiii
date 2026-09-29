@@ -53,7 +53,7 @@ TARGET_NO_BOOTLOADER := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := lancelot,shiva,galahat
 
- Kernel - prebuilt
+# Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb/mt6768.dtb
