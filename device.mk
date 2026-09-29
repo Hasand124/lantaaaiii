@@ -24,6 +24,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# System as root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
