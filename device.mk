@@ -21,9 +21,6 @@ LOCAL_PATH := device/xiaomi/lancelot
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
