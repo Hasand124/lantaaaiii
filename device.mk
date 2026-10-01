@@ -21,6 +21,8 @@ LOCAL_PATH := device/xiaomi/lancelot
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+PRODUCT_SHIPPING_API_LEVEL := 29
+
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Boot control HAL
