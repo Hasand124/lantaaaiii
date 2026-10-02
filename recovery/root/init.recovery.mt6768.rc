@@ -68,9 +68,3 @@ on boot
     start boot-hal-1-2
     start health-hal-2-1
     start unified-script
-
-# Fix flashlight on orangefox
-on property:ro.orangefox.boot=1
-    mkdir /tmp/flashlight
-    write /tmp/flashlight/max_brightness "1"
-    symlink /sys/devices/platform/flashlights_led191/leds/torch-light0/brightness /tmp/flashlight/brightness
