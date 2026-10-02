@@ -24,9 +24,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Api 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# System Root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
