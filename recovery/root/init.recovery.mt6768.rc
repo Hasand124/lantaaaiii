@@ -65,6 +65,5 @@ on property:twrp.decrypt.done=true
     stop hwservicemanager
 
 on boot
-    start boot-hal-1-2
     start health-hal-2-1
     start unified-script
